@@ -1,5 +1,5 @@
 const a = document.getElementById("play");
-adoElm = new Audio('Songs/1.mp3');
+adoElm = new Audio('../Songs/1.mp3');
 playerImage = document.getElementById("playerImage");
 function play(){
     a.classList.toggle('bx-play')
