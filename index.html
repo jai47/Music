@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Source/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>BirdzMusix | Home</title>
 </head>
@@ -20,21 +21,30 @@
 
     <!------------------------------------------------------  Main ----------------------------------------------------->
     <section>
-        <div></div>
+        <div id="scroll">
+        </div>
+        <div id="cover_art">
+        </div>
+
+
+        <!-- <div id="main_img"></div> -->
     </section>
 
 
     <!------------------------------------------------------ Footer ---------------------------------------------------->
     <footer>
         <img src="Source/player.gif" id="playerImage" alt="">
-
+        <div class="btn">
         <i class='bx bx-skip-previous'></i>
 
-        <i class='bx bx-play' id="play" onclick="play()"></i>
+        <i class='bx bx-play' id="play"></i>
         <!-- <i class='bx bx-pause' ></i> -->
         <i class='bx bx-skip-next'></i>
-        
-        <input type="range" name="" id="progressBar" min="0" max="100" value="0">
+    </div>
+        <p id="current_duration"></p>
+        <input type="range" name="" id="progressBar" min="0" max="100000" value="0">
+
+        <p id="total_duration"></p>
     </footer>
     <!------------------------------------------------------ Scripts --------------------------------------------------->
 

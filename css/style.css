@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: 'Dancing Script', cursive;
 }
 body{
     overflow: hidden;
@@ -46,17 +48,28 @@ header h3{
 section{
     height: 80vh;
     width: 100vw;
-    background: linear-gradient(90deg, grey,black,black,grey);
     display: flex;
     align-items: center;
 }
 
-section div{
-    height: 100%;
-    width: 40%;
-    margin: auto;
-    background-image: url("../Source/4RNk.gif");
-    background-repeat: no-repeat;
+#scroll{
+    height: 98%;
+    width: 30vw;
+    margin-left: 2vh;
+    background: linear-gradient(rgb(150, 150, 150),rgb(100, 100, 100), rgb(50, 50, 50));
+    border-radius: 1vh;
+    overflow-y: scroll;
+}
+#cover_art{
+    height: 98%;
+    width: 67vw;
+    margin-left: 2vh;
+    margin-right: 1vh;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vh;
 }
 
 footer{
@@ -64,39 +77,104 @@ footer{
     bottom: 0;
     width: 100vw;
     height: 10vh;
-    background: black;
+    background: rgb(19, 19, 19);
     display: flex;
     justify-content: center;
 }
+
+
+/* 
+#main_img{
+    animation: pad 5s linear infinite;
+
+} */
 
 footer img{
     border-right: 2px solid grey;
     opacity: 0;
     animation: pad 5s linear infinite;
-    transition: 1.5s;
+    mix-blend-mode: screen;
+    transition: 1s,opacity 0.3s;
 }
 @keyframes pad{
     0%{
-        filter: hue-rotate(0deg) brightness(1);
+        filter: hue-rotate(0deg) brightness(2);
     }
 
     50%{
-        filter: hue-rotate(180deg) brightness(0.2);
+        filter: hue-rotate(180deg) brightness(0.5);
     }
     100%{
-        filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg) brightness(2);
     }
 }
-.bx{
+.btn{
     color: aliceblue;
     font-size: 5vh;
     align-self: center;
     margin: auto;
 }
 
+.btn .bx{    
+    position: relative;
+    left: 0;
+}
+
 
 #progressBar{
-    width: 80vw;
+    width: 50vw;
+    height: 2px;
+    background: blue;
+    position: relative;
+    bottom: 1vh;
     margin: auto;
 
+}
+
+#current_duration{
+    color: aliceblue
+
+}
+
+#total_duration{
+    color: aliceblue
+    
+}
+
+
+@media only screen and (max-width: 600px){
+    header{
+        height: 8vh;
+    }
+
+    header img{
+        width: 45px;
+        height: 45px;
+        position: relative;
+        left: 5px;
+    }
+    
+    section{
+        height: 84vh;
+
+    }
+
+    .btn{
+        margin: 0;
+        display: flex;
+        position: relative;
+        left: 0;
+    }
+
+    .btn .bx{
+        padding: 0;
+        margin: 0;
+    }
+
+    footer{
+        height: 8vh;
+    }
+    footer img{
+        display: none;
+    }
 }
